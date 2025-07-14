@@ -20,7 +20,7 @@
 - Поддержка временных рамок (дедлайнов)
 - Сохранение задач в `localStorage`
 ## Установка и запуск
-- git clone https://github.com/
+- git clone https://github.com/Zer0BrainCell/Task-manager
 - cd task-manager
 - npm install
 - npm run dev
