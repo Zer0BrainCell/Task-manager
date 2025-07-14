@@ -1,0 +1,100 @@
+.task-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-deadline {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.task-desc {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.task-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #333;
+}
+
+.chip.ошибка {
+  background-color: #8b0000;
+}
+.chip.функция {
+  background-color: #005b99;
+}
+.chip.документация {
+  background-color: #4b0082;
+}
+.chip.рефакторинг {
+  background-color: #6b4f4f;
+}
+.chip.тест {
+  background-color: #2f855a;
+}
+.chip.впроцессе,
+.chip.в\ процессе {
+  background-color: #d97706;
+}
+.chip.готово {
+  background-color: #2b9348;
+}
+.chip.предстоитсделать,
+.chip.предстоит\ сделать {
+  background-color: #666;
+}
+.chip.низкий {
+  background-color: #3a3a3a;
+}
+.chip.средний {
+  background-color: #5c5c5c;
+}
+.chip.высокий {
+  background-color: #ff4500;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  color: #1890ff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn {
+  color: #ff4d4f;
+}
