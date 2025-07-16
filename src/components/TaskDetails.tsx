@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTasks } from "../context/TaskContext";
 import type { TaskCategory, TaskPriority, TaskStatus } from "../types"; 
 import{taskCategoryOptions, taskStatusOptions, taskPriorityOptions} from './option-list/options'
+import './TaskDetails.css'
 
 const TaskDetails = ()=>{
 const {id} = useParams()

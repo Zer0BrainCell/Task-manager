@@ -3,6 +3,7 @@ import TaskItem from '../components/TaskItem'
 import { useState } from 'react'
 import type { TaskCategory, TaskPriority, TaskStatus } from '../types'
 import './TaskList.css'
+import{taskCategoryOptions, taskStatusOptions, taskPriorityOptions} from './option-list/options'
 
 const TaskList = () => {
   const { tasks, addTask } = useTasks()
@@ -49,24 +50,17 @@ const TaskList = () => {
                     <h3>Новая задача</h3>
                     <form onSubmit={handleSubmit} className='modal-form'>
                       <input type="text" placeholder='Заголовок'value={title} onChange={e=> setTitle(e.target.value)} required />
+                        <textarea placeholder="Описание (необязательно)"value={description}onChange={e => setDescription(e.target.value)}/>
                     <select value={category} onChange={e=>setCategory(e.target.value)}>
                         <option disabled hidden value="">Выберите категорию</option>
-                        <option>Ошибка</option>
-                        <option>Функция</option>
-                        <option>Документация</option>
-                        <option>Рефакторинг</option>
-                        <option>Тест</option>   
+                        {taskCategoryOptions}
                     </select>
                       <select value={status} onChange={e => setStatus(e.target.value)}>
-                        <option>Предстоит сделать</option>
-                        <option>В процессе</option>
-                        <option>Готово</option>
+                      {taskStatusOptions}
               </select>
               <select value={priority} onChange={e => setPriority(e.target.value)}>
                         <option disabled hidden value="">Выберите приоритет</option>
-                        <option>Низкий</option>
-                        <option>Средний</option>
-                        <option>Высокий</option>
+                        {taskPriorityOptions}
               </select>
               <input
                 type="date" value={deadline} min={new Date().toISOString().split('T')[0]}  onChange={e => setDeadline(e.target.value)} required />
