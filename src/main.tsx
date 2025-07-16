@@ -12,9 +12,9 @@ createRoot(document.getElementById('root')!).render(
   theme={{
     algorithm: theme.darkAlgorithm,
     token: {
-      colorBgBase: '#242424', // фон чуть светлее, вместо почти черного
-      colorTextBase: '#e0e0e0', // светлый текст
-      colorPrimary: '#1890ff',  // основной цвет
+      colorBgBase: '#242424', 
+      colorTextBase: '#e0e0e0', 
+      colorPrimary: '#1890ff',  
     },
   }}
 >
