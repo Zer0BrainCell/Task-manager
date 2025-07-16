@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {BrowserRouter} from 'react-router-dom'
+import {HashRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import 'antd/dist/reset.css'
 import { ConfigProvider, theme } from 'antd'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-   <BrowserRouter>
+   <HashRouter >
     <ConfigProvider
   theme={{
     algorithm: theme.darkAlgorithm,
@@ -20,6 +20,6 @@ createRoot(document.getElementById('root')!).render(
 >
   <App />
 </ConfigProvider>
-    </BrowserRouter>
+    </HashRouter >
   </StrictMode>,
 )
