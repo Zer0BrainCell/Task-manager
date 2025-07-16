@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTasks } from "../context/TaskContext";
-import type { TaskCategory, TaskPriority, TaskStatus, Task } from "../types"; 
+import type { TaskCategory, TaskPriority, TaskStatus } from "../types"; 
+import{taskCategoryOptions, taskStatusOptions, taskPriorityOptions} from './option-list/options'
 
 const TaskDetails = ()=>{
 const {id} = useParams()
@@ -20,7 +21,7 @@ const [deadline, setDeadline] = useState(task.deadline || '')
 
 const handleSave = () => {
  updateTask({
-    ...task,
+    id: task.id,
     title,
     description,
     category,
@@ -49,27 +50,19 @@ return(
         <div className="form-group">
             <label>Категория</label>
             <select value={category} onChange={e=>setCategory(e.target.value as TaskCategory)}>
-            <option>Баг</option>
-            <option>Функция</option>
-            <option>Документация</option>
-            <option>Рефакторинг</option>
-            <option>Тест</option>
+                {taskCategoryOptions}
             </select>
         </div>
         <div className="form-group">
             <label>Статус</label>
             <select value={status} onChange={e => setStatus(e.target.value as TaskStatus)}>
-            <option>Предстоит сделать</option>
-            <option>В процессе</option>
-            <option>Готово</option>
+                {taskStatusOptions}
             </select>
         </div>
         <div className="form-group">
             <label>Приоритет</label>
-            <select>
-                <option>Низкий</option>
-                <option>Средний</option>
-                <option>Высокий</option>
+            <select value = {priority} onChange={e=>setPriority(e.target.value as TaskPriority)}>
+                {taskPriorityOptions}
             </select>
         </div>
         <div className="form-group">

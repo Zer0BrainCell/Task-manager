@@ -10,7 +10,11 @@ removeTask: (id: string) => void
 
 const TaskContext = createContext<TaskContextType | undefined>(undefined)
 
-export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface TaskProviderProps{
+  children: React.ReactNode
+}
+
+export const TaskProvider = ({children}:TaskProviderProps)=>{
   const [tasks, setTasks] = useState<Task[]>(() => {
   const stored = localStorage.getItem('tasks')
   return stored ? JSON.parse(stored) : []
