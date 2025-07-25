@@ -7,7 +7,7 @@
 - React Router v6
 - Vite
 - CSS-модули
-- Context API + useState
+- Redux-toolkit
 - LocalStorage
 - Адаптивная верстка
 ## Функционал
@@ -20,7 +20,7 @@
 - Поддержка временных рамок (дедлайнов)
 - Сохранение задач в `localStorage`
 ## Установка и запуск
-- git clone https://github.com/Zer0BrainCell/Task-manager
-- cd task-manager
+- git clone [https://github.com/Zer0BrainCell/Task-manager](https://github.com/Zer0BrainCell/Task-manager/tree/homework-2)
+- cd homework-1
 - npm install
 - npm run dev
