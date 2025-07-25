@@ -12,3 +12,9 @@ export interface Task {
   priority: TaskPriority
   deadline?: string 
 }
+export interface TaskFormProps{
+  onClose:()=> void
+  task?: Task 
+  onSubmit?: (task: Task) => void 
+
+}

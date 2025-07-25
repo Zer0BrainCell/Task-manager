@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import type { Task } from '../types'
-import { useTasks } from '../context/TaskContext'
+import type { Task } from '../../../shared/types'
+import { useDispatch } from 'react-redux'
+import { deleteTask } from '../model/taskSlice'
 import './TaskItem.css'
 
 type Props = {
@@ -8,7 +9,12 @@ type Props = {
 }
 
 const TaskItem = ({ task }: Props) => {
-  const { removeTask } = useTasks()
+  const dispatch = useDispatch()
+  const handleDelete = ()=>{
+    if(confirm('Удалить эту задачу?')){
+      dispatch(deleteTask(task.id))
+    }
+  }
 
   return (
     <div className="task-card">
@@ -27,9 +33,7 @@ const TaskItem = ({ task }: Props) => {
 
       <div className="task-actions">
         <Link to={`/task/${task.id}`} className="edit-btn">Редактировать</Link>
-        <button className="delete-btn" onClick={() => {
-          if (confirm('Удалить эту задачу?')) removeTask(task.id)
-        }}>Удалить</button>
+        <button className="delete-btn" onClick={() => handleDelete()}>Удалить</button>
       </div>
     </div>
   )

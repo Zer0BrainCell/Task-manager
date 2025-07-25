@@ -1,0 +1,42 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #242424;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.task-list-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background-color: #1890ff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #40a9ff;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}

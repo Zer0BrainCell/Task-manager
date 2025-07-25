@@ -1,0 +1,65 @@
+.task-list-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-list-header h2 {
+  font-size: 26px;
+  margin: 0;
+  color: #eee;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  background-color: #1677ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+  background-color: #0958d9;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 24px 0;
+}
+
+:global(.ant-empty-description) {
+  font-size: 16px;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .task-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,10 +8,11 @@
   flex-direction: column;
   gap: 10px;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .task-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .task-header {
@@ -44,57 +45,52 @@
   background-color: #333;
 }
 
-.chip.ошибка {
-  background-color: #8b0000;
-}
-.chip.функция {
-  background-color: #005b99;
-}
-.chip.документация {
-  background-color: #4b0082;
-}
-.chip.рефакторинг {
-  background-color: #6b4f4f;
-}
-.chip.тест {
-  background-color: #2f855a;
-}
-.chip.впроцессе,
-.chip.в\ процессе {
-  background-color: #d97706;
-}
 .chip.готово {
   background-color: #2b9348;
 }
 .chip.предстоитсделать,
-.chip.предстоит\ сделать {
-  background-color: #666;
-}
-.chip.низкий {
-  background-color: #3a3a3a;
-}
-.chip.средний {
-  background-color: #5c5c5c;
-}
+.chip.предстоит\ сделать,
+.chip.ошибка,
 .chip.высокий {
-  background-color: #ff4500;
+  background-color: #ff4d4f;
+}
+.chip.впроцессе,
+.chip.в\ процессе {
+  background-color: #ffaa00;
+}
+.chip.низкий,
+.chip.средний {
+  background-color: #555;
 }
 
 .task-actions {
   display: flex;
-  justify-content: flex-end;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .edit-btn,
 .delete-btn {
   background: none;
   border: none;
-  color: #1890ff;
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  color: #1890ff;
+}
+.edit-btn:hover {
+  background-color: rgba(24, 144, 255, 0.1);
 }
 
 .delete-btn {
   color: #ff4d4f;
+}
+.delete-btn:hover {
+  background-color: rgba(255, 77, 79, 0.1);
 }
