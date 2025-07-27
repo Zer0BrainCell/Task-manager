@@ -21,7 +21,7 @@
 - Поддержка временных рамок (дедлайнов)
 - Сохранение задач на локальный сервер
 ## Установка и запуск
-- git clone https://github.com/Zer0BrainCell/Task-manager
+- git clone https://github.com/Zer0BrainCell/Task-manager/tree/Homework-3
 - cd task-manager
 - npm install
 - npm run dev
