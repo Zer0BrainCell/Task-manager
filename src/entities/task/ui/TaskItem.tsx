@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom'
 import type { Task } from '../../../shared/types'
-import { useDispatch } from 'react-redux'
-import { deleteTask } from '../model/taskSlice'
+import { useAppDispatch } from '../../../shared/lib/hooks' 
+import { removeTask  } from '../model/taskSlice'
 import './TaskItem.css'
+
+
 
 type Props = {
   task: Task
 }
 
 const TaskItem = ({ task }: Props) => {
-  const dispatch = useDispatch()
-  const handleDelete = ()=>{
+  console.log('task в TaskItem:', task)
+console.log('task.id:', task.id)
+  const dispatch = useAppDispatch()
+  const handleDelete = async ()=>{
     if(confirm('Удалить эту задачу?')){
-      dispatch(deleteTask(task.id))
+      await dispatch(removeTask(task.id)).unwrap()
     }
   }
 

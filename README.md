@@ -1,6 +1,6 @@
 # Менеджер задач
 
-Веб-приложение на React + TypeScript для создания и редактирования задач. Сохранение данных идёт в LocalStorage.
+Веб-приложение на React + TypeScript для создания и редактирования задач. Реализован Backend в виде сервера Node.js Сохранение данных идёт в массив в файле db.json.
 ## Технологии
 
 - React + TypeScript
@@ -8,7 +8,8 @@
 - Vite
 - CSS-модули
 - Context API + useState
-- LocalStorage
+- Node.js + Express(CORS)
+- Сохранение данных на локальный сервер
 - Адаптивная верстка
 ## Функционал
 
@@ -18,9 +19,12 @@
 - Редактирование задачи
 - Подсказки и валидация форм
 - Поддержка временных рамок (дедлайнов)
-- Сохранение задач в `localStorage`
+- Сохранение задач на локальный сервер
 ## Установка и запуск
 - git clone https://github.com/Zer0BrainCell/Task-manager
 - cd task-manager
+- npm install
+- npm run dev
+- cd server
 - npm install
 - npm run dev

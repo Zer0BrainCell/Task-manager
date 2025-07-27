@@ -44,25 +44,7 @@ export interface Task {
   category: TaskCategory
   status: TaskStatus
   priority: TaskPriority
-  deadline?: string 
+  deadline?: string
 }
 
-/**
- * Пропсы для компонента формы задачи.
- * @property onClose - функция, вызываемая при закрытии формы
- * @property task - (Опционально) задача для редактирования
- * @property onSubmit - (Опционально) функция, вызываемая при отправке формы с данными задачи
- */
-export interface TaskFormProps{
-  onClose:()=> void
-  task?: Task 
-  onSubmit?: (task: Task) => void 
-
-}
-
-/**
- * Тип для создания задачи.
- * Отличается от Task отсутствием поля id,
- * так как id генерируется сервером.
- */
-export type TaskCreate = Omit<Task, 'id'>
+export let tasks: Task[] = []
